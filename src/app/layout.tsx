@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Baloo_2, Mukta } from "next/font/google";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 // Both families include Devanagari, so Nepali text matches the English around it.
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <SpeedInsights />
       </body>
     </html>
   );
